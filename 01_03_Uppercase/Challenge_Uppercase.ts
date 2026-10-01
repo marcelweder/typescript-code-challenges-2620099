@@ -26,9 +26,8 @@ type Alphabet =
   | "y"
   | "z";
 
-type GermanUppercaseStrings = any;
-
-// komplexe Lösung möglich, aber nicht notwendig
+// type GermanUppercaseStrings = Capitalize<string>;
+type GermanUppercaseStrings = `${Uppercase<Alphabet>}${string}`;
 
 export const Output = (s: GermanUppercaseStrings) => {
   console.log(s);
