@@ -1,5 +1,5 @@
 class Animal {
-  constructor(name: string, type: string) {
+  constructor(public name: string, public type: string) {
     console.log("Neues Tier erzeugt mit Name=", name, " und Typ=", type);
   }
 }
