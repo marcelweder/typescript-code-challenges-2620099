@@ -4,7 +4,7 @@ function createPromise() {
 
 const myPromise = createPromise();
 
-type ResolvedType = any;
+type ResolvedType = Awaited<typeof myPromise>;
 
 const valueWithSameTypeValid: ResolvedType = 43; // ✅
 const valueWithSameTypeWrong: ResolvedType = "test"; // ❌
