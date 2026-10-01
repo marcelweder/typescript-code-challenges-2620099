@@ -6,11 +6,11 @@ export function setSettings(config: {
 }
 
 // Config von Settings Function holen
-type Config = any;
+type Config = Parameters<typeof setSettings>[0];
 
 const cfg: Config = {
-  theMode: "Dev", // sollte sich beschweren weil es 'mode' heisst
-  limitUsers: 2, // muss boolean, kein number type sein
+  mode: "Test", // sollte sich beschweren weil es 'mode' heisst
+  limitUsers: true, // muss boolean, kein number type sein
 };
 
 setSettings(cfg);
