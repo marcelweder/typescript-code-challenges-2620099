@@ -10,12 +10,10 @@ class IceCreamDatabase {
     new IceCream(9, "Strawberry Choc"),
   ];
 
+  static getByIdOrName(type: "id", idOrName: number): any;
+  static getByIdOrName(type: "name", idOrName: string): any;
   static getByIdOrName(type: "id" | "name", idOrName: number | string) {
-    if (type === "id") {
-      return IceCreamDatabase.db.find((ic) => ic.id === idOrName);
-    } else {
-      return IceCreamDatabase.db.find((ic) => ic.name === idOrName);
-    }
+    return IceCreamDatabase.db.find((ic) => ic[type] === idOrName);
   }
 }
 
