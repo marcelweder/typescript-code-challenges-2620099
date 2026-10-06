@@ -1,4 +1,4 @@
-function inputTypeIsOutputType(input: string | number) {
+function inputTypeIsOutputType<T extends any>(input: T): T {
   return input;
 }
 

@@ -18,6 +18,6 @@ type Dogs = {
 
 type OurAnimals = Birds | Sharks | Dogs;
 
-type OurAnimalsWith4Legs = OurAnimals;
+type OurAnimalsWith4Legs = Extract<OurAnimals, { legs: 4 }>;
 
 export {};

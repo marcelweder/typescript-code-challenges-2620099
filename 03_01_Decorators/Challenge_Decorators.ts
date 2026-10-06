@@ -1,4 +1,6 @@
-function jsonToName(originalMethod: any, context: any) {}
+function jsonToName(originalMethod: any, context: any) {
+  return () => JSON.parse(originalMethod()).name;
+}
 
 class FetchJson {
   @jsonToName

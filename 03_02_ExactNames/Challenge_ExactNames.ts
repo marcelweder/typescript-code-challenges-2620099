@@ -1,8 +1,8 @@
-export function getNamesExactly<T extends any[]>(arg: T): T {
+export function getNamesExactly<const T extends readonly any[]>(arg: T): T {
   return arg;
 }
 
-const namesInput = ["Eve", "Alice"];
+const namesInput = ["Eve", "Alice"] as const;
 
 const names = getNamesExactly(namesInput);
 const names2 = getNamesExactly(["Bob", "Steve"]);

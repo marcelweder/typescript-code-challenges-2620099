@@ -3,9 +3,9 @@
 // let readonlyArray: ReadonlyArray<number> = [1, 2, 3] as const;
 
 
-let inputArray = [1, 2, 3] ;
+let inputArray = [1, 2, 3] as const;
 
-const getFirst = <const T extends readonly any[]>(input: T): T[0] => {
+const getFirst = <T extends readonly any[]>(input: T): T[0] => {
   return input[0];
 };
 
